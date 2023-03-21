@@ -16,17 +16,23 @@ void times_table(void)
 			{
 				s = p % 10;
 				f = p / 10;
+				_putchar(',');
+				_putchar(' ');
 				_putchar(f + '0');
 				_putchar(s + '0');
-				_putchar(',');
 			}
 			else
 			{
-				_putchar(p + '0');
-				_putchar(',');
-				_putchar(' ');
+				if (p != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(p + '0');
+				}
+				else
+					_putchar(p + '0');
 			}
-			_putchar(' ');
 		}
 		_putchar('\n');
 	}
