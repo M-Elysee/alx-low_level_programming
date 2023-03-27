@@ -5,28 +5,22 @@
 */
 void rev_string(char *s)
 {
-	int k, i = 0, a = 0;
-	char swp[10];
+	int k = 0, i = 0;
+	char rev[100];
 
 	while (*(s + i) != '\0')
 	{
 		i++;
 	}
-	k = i;
-	k++;
-
+	i--;
 	while (i >= 0)
 	{
-		swp[a] = *(s + i);
-		
+		rev[k] = *(s + i);
+		k++;
 		i--;
-		a++;
 	}
-	while (k>=0)
+	for (i = 0; i < k; i++)
 	{
-		*(s + i) = swp[i];
-		_putchar(*(s + i));
-		i++;
-		k--;
+		*(s + i) = *(rev + i);
 	}
 }
