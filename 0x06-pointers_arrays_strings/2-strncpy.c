@@ -12,7 +12,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	/* counting the length of the 2 strings*/
 	for (i = 0; *(src + i) != 0; i++)
-	{} i--;
+	{} 
 	for (k = 0; *(dest + k) != 0; k++)
 	{} k--;
 	/* when the needed chunck is greater than the second string*/
