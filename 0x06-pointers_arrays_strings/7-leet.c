@@ -7,7 +7,7 @@
 char *leet(char *n)
 {
 	int i, j;
-	char *let = "aAeEoOtTlT";
+	char *let = "aAeEoOtTlL";
 	char *rep = "4433007711";
 
 	for (i = 0; *(n + i) != 0; i++)
