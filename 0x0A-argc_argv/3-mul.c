@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc || argc == 1; i++)
 	{
-		if (argc >= 3)
+		if (argc == 3)
 		{
 			s = atoi(argv[i]);
 			m = m * s;
