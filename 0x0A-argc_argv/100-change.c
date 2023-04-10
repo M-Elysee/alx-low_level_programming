@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
 *main - to calculate the minimum number if change
 *@argc: is the number of arguments
@@ -9,9 +10,14 @@
 */
 int main(int argc, char *argv[])
 {
-	int m, s;
+	int m, s, d = 0, j;
 
-	if (argc != 2)
+	for (j = 0; argc != 1 && argv[1][j]; j++)
+	{
+		if (argv[1][j] < 48 || argv[1][j] > 57)
+			d++;
+	}
+	if (argc != 2 || d > 0)
 	{
 		printf("Error\n");
 		return (1);
