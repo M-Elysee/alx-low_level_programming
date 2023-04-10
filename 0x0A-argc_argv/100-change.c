@@ -12,6 +12,11 @@ int main(int argc, char *argv[])
 {
 	int m, s, d = 0, j;
 
+	if (argv[1] && atoi(argv[1]) < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	for (j = 0; argc != 1 && argv[1][j]; j++)
 	{
 		if (argv[1][j] < 48 || argv[1][j] > 57)
@@ -23,6 +28,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	m = atoi(argv[1]);
+	if (m < 0)
+		printf("0\n");
 	/* adding the 25 cent change if possible depending on the amount*/
 	s = m / 25;
 	m = m % 25;
