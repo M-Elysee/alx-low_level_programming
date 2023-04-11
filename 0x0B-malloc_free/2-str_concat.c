@@ -25,7 +25,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (j < i)
 			p[j] = s1[j];
-		else
+		else if (k != 0)
 		{
 			n = j - i;
 			p[j] = s2[n];
