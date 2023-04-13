@@ -20,12 +20,12 @@ int *array_range(int min, int max)
 		free(p);
 		return (NULL);
 	}
-	for (i = 0; i < (s - 1); i++)
+	for (i = 0; min <= max; i++)
 	{
 		p[i] = min;
 		min++;
 	}
-	p[s - 1] = '\0';
+	p[i] = '\0';
 	return (p);
 }
 
