@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
 /**
 *print_name - pass araguments in functions
 *@name: is the name to be passed
