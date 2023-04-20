@@ -6,7 +6,7 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int i = 0, k;
 	va_list arg;
 	char *d;
 	char *separator = "";
@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	while (format && format[i])
 	{
+		k = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -32,10 +33,11 @@ void print_all(const char * const format, ...)
 			printf("%s%s", separator, d);
 			break;
 			default:
-			i++;
-			continue;
+			k++;
+			break;
 		}
-		separator = ", ";
+		if (k == 0)
+			separator = ", ";
 		i++;
 	}
 	printf("\n");
