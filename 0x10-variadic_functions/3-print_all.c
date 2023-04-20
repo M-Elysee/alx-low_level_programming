@@ -6,7 +6,7 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0, k;
+	int i = 0;
 	va_list arg;
 	char *d;
 	char *separator = "";
@@ -14,7 +14,6 @@ void print_all(const char * const format, ...)
 	va_start(arg, format);
 	while (format[i] && format)
 	{
-		k = 0;
 		switch (format[i])
 		{
 			case 'c':
