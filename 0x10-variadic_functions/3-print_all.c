@@ -33,11 +33,10 @@ void print_all(const char * const format, ...)
 			printf("%s%s", separator, d);
 			break;
 			default:
-			k++;
-			break;
+			i++;
+			continue;
 		}
-		if (k == 0)
-			separator = ", ";
+		separator = ", ";
 		i++;
 	}
 	printf("\n");
