@@ -31,7 +31,7 @@ void readerr(char *ptr, char *argv)
 */
 void writeerr(char *ptr, char *argv)
 {
-	dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv);
 	free(ptr);
 	exit(99);
 }
