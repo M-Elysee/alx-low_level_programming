@@ -16,18 +16,12 @@ int create_file(const char *filename, char *text_content)
 	c_file = creat(filename, 0600);
 	file_d = open(filename, O_WRONLY);
 	if (c_file == -1 || file_d == -1)
-	{
-		write(STDOUT_FILENO, "fails", 5);
 		return (-1);
-	}
 	for (i = 0; text_content != NULL && text_content[i]; i++)
 		;
 	wr = write(file_d, text_content, i);
 	if (wr == -1)
-	{
-		write(STDOUT_FILENO, "fails", 5);
 		return (-1);
-	}
 	close(file_d);
 	close(c_file);
 	return (1);
