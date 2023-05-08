@@ -44,7 +44,7 @@ void writeerr(char *ptr, char *argv)
 int main(int argc, char *argv[])
 {
 	char *ptr;
-	ssize_t f_file_d, t_file_d, rd, wr;
+	int f_file_d, t_file_d, rd, wr;
 
 	if (argc != 3)
 	{
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
 	t_file_d = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	ptr = malloc(sizeof(char) * 1024);
 	if (ptr == NULL)
-		readerr(ptr, argv[1]);
+		writeerr(ptr, argv[2]);
 	rd = read(f_file_d, ptr, 1024);
 	do {
 		if (f_file_d == -1 || rd == -1)
