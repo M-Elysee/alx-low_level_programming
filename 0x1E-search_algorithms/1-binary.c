@@ -4,6 +4,7 @@
 * @array: points to the array into which we are going to search a value
 * @size: the size of the array
 * @value: the value to be searched
+* Return: the index where the value is at or -1 on failure
 */
 int binary_search(int *array, size_t size, int value)
 {
@@ -19,7 +20,7 @@ int binary_search(int *array, size_t size, int value)
 		if (lower >= bigger)
 		{
 			if (array[lower] == value)
-				return(bigger);
+				return (bigger);
 			return (-1);
 		}
 		middle = (lower + bigger) / 2;
